@@ -1,0 +1,10 @@
+
+server:
+  port: 9600
+spring:
+  application:
+    name: spring-data-example
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
