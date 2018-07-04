@@ -17,6 +17,7 @@ pipeline {
         stage ('Build') {
             steps {
               sh "echo ${env.JOB_NAME}"
+              sh "echo ${env.NAME}"
                 sh "mvn  clean install -DskipTests=true"
             }
         }
