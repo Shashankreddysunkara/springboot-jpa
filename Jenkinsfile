@@ -22,6 +22,7 @@ pipeline {
             steps {
                 sh "mvn test"
             }
+         }
            stage ('Deploy to cf') {
             steps {
               sh "cf login -a ${env.CF_API} -u ${env.CF_USERNAME} -p ${env.CF_PASSWORD} -o ${env.CF_ORG} -s ${env.CF_SPACE}"
@@ -31,4 +32,4 @@ pipeline {
     }
 
 }
-}
+
